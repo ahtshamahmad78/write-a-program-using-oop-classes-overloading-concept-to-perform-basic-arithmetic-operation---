@@ -1,0 +1,158 @@
+using System;
+using System.Collections.Generic;
+
+namespace Task3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Which Operation You To Perform :: \n For Sum         :: 1\n For Subtraction :: 2");
+            int selection = int.Parse(Console.ReadLine());
+            if(selection == 1)
+            {
+                Addition calculator = new Addition();
+                calculator.Calculation();
+            }
+            else if (selection == 2)
+            {
+                Subtraction calculator = new Subtraction();
+                calculator.Calculation();
+            }
+            else
+            {
+                Console.WriteLine("Enter Correct Choice ");
+            }
+
+        }
+    }
+    public class Calculator
+    {
+       
+        public float num1, num2, num3, num4,result;
+         
+    }
+    public class Subtraction : Calculator
+    { 
+        public void Calculation()
+        {
+            Console.WriteLine("How much number you want to calculate :: ");
+            int numbers = int.Parse(Console.ReadLine());
+            Subtraction calculator = new Subtraction();
+
+            if (numbers == 2)
+            {
+
+                Console.WriteLine("Enter Number :: ");
+                 num1 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num2 = float.Parse(Console.ReadLine());
+
+                result=calculator.Subtract(num1, num2);
+                Console.WriteLine($"Sum of {num1} , {num2} :: {result}");
+            }
+            else if (numbers == 3)
+            {
+                Console.WriteLine("Enter Number :: ");
+                 num1 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num2 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num3 = float.Parse(Console.ReadLine());
+                result=calculator.Subtract(num1, num2, num3);
+                Console.WriteLine($"Sum of {num1} , {num2} , {num3} :: {result}");
+                 
+
+            }
+            else if (numbers == 4)
+            {
+                Console.WriteLine("Enter Number :: ");
+                num1 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num2 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num3 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num4 = float.Parse(Console.ReadLine());
+                result=calculator.Subtract(num1, num2, num3, num4);
+                Console.WriteLine($"Sum of {num1} , {num2} , {num3} , {num4} :: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Enter Number greater than 1 and less than 4");
+            }
+        }
+        public float Subtract(float a,float b)
+        {
+            return result = a - b;
+        } public float Subtract(float a,float b,float c)
+        {
+            return result = a - b - c;
+        } public float Subtract(float a,float b ,float c,float d)
+        {
+            return  result = a - b - c -d;
+        }
+
+    }public class Addition : Calculator
+    {
+        public void Calculation()
+        {
+            Console.WriteLine("How much number you want to calculate :: ");
+            int numbers = int.Parse(Console.ReadLine());
+            Addition calculator = new Addition();
+
+            if (numbers == 2)
+            {
+
+                Console.WriteLine("Enter Number :: ");
+                 num1 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num2 = float.Parse(Console.ReadLine());
+
+                result=calculator.Add(num1, num2);
+                Console.WriteLine($"Sum of {num1} , {num2} :: {result}");
+            }
+            else if (numbers == 3)
+            {
+                Console.WriteLine("Enter Number :: ");
+                 num1 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num2 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num3 = float.Parse(Console.ReadLine());
+                result=calculator.Add(num1, num2, num3);
+                Console.WriteLine($"Sum of {num1} , {num2} , {num3} :: {result}");
+                 
+
+            }
+            else if (numbers == 4)
+            {
+                Console.WriteLine("Enter Number :: ");
+                num1 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num2 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num3 = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Number :: ");
+                 num4 = float.Parse(Console.ReadLine());
+                result=calculator.Add(num1, num2, num3, num4);
+                Console.WriteLine($"Sum of {num1} , {num2} , {num3} , {num4} :: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Enter Number greater than 1 and less than 4");
+            }
+        }
+        public float Add(float a,float b)
+        {
+            return result = a + b;
+        } public float Add(float a,float b,float c)
+        {
+            return result = a + b + c;
+        } public float Add(float a,float b ,float c,float d)
+        {
+            return  result = a + b + c +d;
+        }
+
+    }
+}
